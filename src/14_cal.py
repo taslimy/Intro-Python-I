@@ -22,3 +22,14 @@ and does the following:
 import sys
 import calendar
 from datetime import datetime
+
+if len(sys.argv) > 1:
+  arg_month = int(sys.argv[1])
+  arg_year = int(sys.argv[2])
+  print(arg_month, arg_year)
+else:
+  print(datetime.now())
+
+
+
+# note sure what to do here.

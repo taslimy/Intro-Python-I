@@ -59,10 +59,11 @@ print(f3(8))     # Should print 9
 
 # YOUR CODE HERE
 
+# https: // www.geeksforgeeks.org/args-kwargs-python/
 
-def f4(key=[], value=[]):
-    print({key}, {value})
-
+def f4(*args, **kwargs):
+    for key, value in kwargs.items():
+        print(f'key: {key}, value: {value}')
 
 # Should print
 # key: a, value: 12
@@ -81,4 +82,4 @@ d = {
 }
 
 # What thing do you have to add to make this work?
-f4(d)
+f4(**d)
